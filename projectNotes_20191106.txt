@@ -1,0 +1,124 @@
+		https://www.regular-expressions.info/replacebackref.html
+In Python, if you have the regex (?P<name>group) then you can use its match in the replacement text with \g<name>. This syntax also works in the JGsoft applications and Delphi. Python and the JGsoft applications, but not Delphi, also support numbered backreferences using this syntax. In Python this is the only way to have a numbered backreference immediately followed by a literal digit.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+271,145 data rows and one header row, 15 columns.
+
+Only if the patterns showed column has numeric of floating type values, the Summary Statistics was applied by changing the column type to be either Integer or Float (in a different File Connection).
+ID, Age, Height, Weight and Year columns are treated as numeric float type. Note that ID, Age and Year could be treated as integer types based on their value patterns but as it makes no difference in the Summary Statistics, this was not done.
+
+		Profile notes for each columns:
+
+	column 1 : ID
+There are no blank and null values. Presence of duplicates (21.27%) suggests either data is extremely dirty or, more probably, same athlete participated in multiple events at different games.
+Only numerical patterns of length from 1 to 6 digits, range is from 1 to 135571.
+The values are distributed fairly uniformly.
+
+
+	column 2 : Name
+There are just 2 blank values and no null values.
+Duplicates (20.82%) is lesser than for ID (21.27%) which is odd as I
+expected it be exactly equal or, more probably, slightly higher.
+Patterns vary significantly as expected. The names
+appearing most frequently seem to have only first names.
+
+
+	column 3 : Sex
+There are many blank values and no null values.
+As expected, there is no unique count and all values are duplicated.
+But there are 7 distinct counts which indicates data must be dirty. This is confirmed by the multiple patterns and different values seen.
+
+
+	column 4 : Age
+There are many blank values and no null values.
+As expected, there are a few unique counts and many duplicate counts. But there are text values also present which shows data must be dirty which is confirmed the value frequency table.
+However, it appears that the data may be shifted slightly in some rows so values corresponding to columns for Sex, Season, NOC, etc are seen.
+The summary statistics shows the range is from 10 to 97 with a mean of around 25 years, Q1=21 and Q3=28.
+All these values make sense for ages of sportsmen competing in Olympics.
+
+
+	column 5 : Height
+There are many blank values and no null values.
+As expected, there are several unique counts and duplicate counts together, with unique count approx. 25% of the distinct count.
+But there are text values also present which shows data could be dirty.
+But the value frequency table shows this actually corresponds to the "NA" value which probably means the height is not recorded.
+There are also float type values.
+The range is from 127 to 1982.5, mean is around 175, Q1=168 and Q3=183.
+Except for the maximum value, the rest seem to be reasonable values.
+
+
+	column 6 : Weight
+There are many blank values and no null values.
+Unlike the case with Height, here the unique counts is much lower and duplicate counts higher, with unique count approx. 3% of the distinct count, which is much lower than I thought it would be. However the data could be that way and it is not an immediate red-flag.
+As was with the Height feature, the "NA" values present show up in the pattern frequency table and there are also float type values.
+The range is from 25 to 198, mean is around 70 kgs, Q1=60 and Q3=79.
+Even though the Value low frequency table shows values well over even 150 kgs, these are really one-off cases and could be accurate.
+
+
+	column 7 : Team
+There are several blank values and no null values.
+Given there are around 200 countries, the counts for unique, duplicate and distinct seem too high and indicate dirty data; which is further confirmed by the value low frequency values.
+The patterns expected were alphabetic with large variation, but the alphanumeric low frequency patterns are odd (e.g. Aaa-99, etc).
+The maximum length at around 50 characters is possible in some extreme cases, but the average length of around 8 characters is possible.
+
+
+	column 8 : NOC
+There are several blank values and no null values.
+Given there are around 200 countries, all the values being duplicated expect for one NOC, and the distinct count of 231 is reasonable.
+The 3 character length alphabetic pattern is seen across the data wherever there are values and this corresponds to the maximum length of 3
+characters.
+The values seen in the Value frequency and low frequency tables appear reasonable.
+
+
+	column 9 : Games
+There are several blank values and no null values.
+All the data values are repeated as the unique count is 0.
+The pattern is uniform with 4 characters numeric followed by 6 characters alphabetic.
+The values seen indicate the field value should be a concatenation of the Year and Season column values.
+
+
+	column 10 : Year
+There are many blank values and no null values.
+All the values are repeated as the unique count is 0.
+If one ignores the blank values, there is only one pattern of four character numeric values - which is exactly as expected which matches an integer type.
+The range is from 1896 to 2016; the Q1=1960 and Q3=2002 – which seems reasonable value as data for the games held long ago may not be easily available.
+The dataset contains information on athletes who participated in more recent games and the value frequency table shows the maximum entries are from 1992 year.
+
+
+	column 11 : Season
+There are several blank values and no null values.
+All the data values are repeated as the unique count is 0.
+Ignoring the blank entries, the pattern is uniform as an alphabetic 6 characters – which corresponds to the values of "Summer" and "Winter" and match the values seen in the value frequency tables of the Games column analysis.
+
+
+	column 12 : City
+There are several blank values and no null values. As expected, the unique count is 0.
+The value frequency table shows London has the maximum entries with Chamonix the least.
+As expected, the patterns shown are alphabetic with large variation in lengths from 4 to 22 characters. But there seem to be just 16 cities in the dataset as there are only many unique patterns (ignoring Empty field).
+
+
+	column 13 : Sport
+There are several blank values and no null values.
+As expected, most of the sports have repeating values.
+From the value frequency table we see that "Athletics" appears maximum times, while the sport called "Aeronautics" appears just once.
+The patterns show large variation, as expected, with alphabetic type entries and lengths from 4 to 25 characters.
+
+
+	column 14 : Event
+There are several blank values and no null values.
+Except for just 2 events, all others have repeating values.
+The patterns show large variation, as expected, with alphabetic type entries and lengths from 15 to 60 characters.
+The event seems to have the Sport name as part of it's own name.
+
+
+	column 15 : Medal
+Almost 25% of the values are blank and no null values.
+From the value frequency table, we see the bulk (around 64%) of the values is "NA" which probably means the athlete did not win any medal in the event. However, we also see an inconsistent representation with 1st / 2nd / 3rd appearing to correspond to Gold/ Silver/ Bronze. Accounting for the 1st / 2nd / 3rd usage, the total for Gold = 9930 + 21 = 9951; for Silver = 9835 + 27 = 9862; and for Bronze =
+10084 + 26 = 10110.
+Ideally, one would expect equal number of entries for each of the medals. This could possibly be due to dirty or incomplete data.
+The patterns show lengths from 2 to 6 characters.
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
