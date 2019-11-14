@@ -1,0 +1,235 @@
+
+    *************************************************************** 
+    *************************************************************** 
+    *************************************************************** 
+
+    *************************************************************** 
+    *************************************************************** 
+    *************************************************************** 
+
+    *************************************************************** 
+    *************************************************************** 
+    *************************************************************** 
+ Data Curation and Modelling Processing.
+
+    *************************************************************** 
+    *************************************************************** 
+    *************************************************************** 
+
+    *************************************************************** 
+    *************************************************************** 
+    *************************************************************** 
+
+    *************************************************************** 
+    *************************************************************** 
+    ***************************************************************  
+
+
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+# Rows read into dataframe = all the rows
+NOTE: All columns are read in with dtype as str, i.e. all columns are of object type
+NOTE: keep_default_na=False is used, so all data is loaded as it is without automatic replacement with null or Nan
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Season
+Shape before: (255692, 1)
+Shape after: (2, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Season.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column City
+Shape before: (255692, 1)
+Shape after: (42, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_City.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Year
+Shape before: (255692, 1)
+Shape after: (35, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Year.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Team
+Shape before: (255692, 1)
+Shape after: (1020, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Team.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Sport
+Shape before: (255692, 1)
+Shape after: (66, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Sport.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Event
+Shape before: (255692, 1)
+Shape after: (598, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Event.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Medal
+Shape before: (255692, 1)
+Shape after: (4, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Medal.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column NOC
+Shape before: (255692, 1)
+Shape after: (229, 2)
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_NOC.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Game.
+Shape before: (255692, 3)
+Shape after: (52, 4)
+
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Games.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Sport.
+Shape before: (255692, 2)
+Shape after: (598, 3)
+
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Event.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating Dimension Table for column Athlete.
+Shape before: (255692, 5)
+Shape after: (134269, 6)
+
+Dimension Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Dim_Athlete.csv
+
+
+    *************************** 
+    *************************** 
+
+    *************************** 
+    *************************** 
+
+
+
+ACTION:
+Creating FACT Table for Participant.
+Shape before: (255692, 16)
+Shape after: (255692, 17)
+
+Fact Table created here:
+/home/rohit/PyWDUbuntu/DM2DataCuration/Schema/Fact_Participant.csv
